@@ -1,0 +1,6 @@
+tmp/
+verify/work/
+node_modules/
+.DS_Store
+*.log
+ark-agent-plan-keys.json

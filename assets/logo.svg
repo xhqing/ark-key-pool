@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="200" viewBox="0 0 640 200" role="img" aria-label="ark-key-pool — multi-key failover for Agent Plan">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B4CCA"/>
+      <stop offset="100%" stop-color="#1B1F4B"/>
+    </linearGradient>
+    <linearGradient id="key" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8FA6FF"/>
+      <stop offset="100%" stop-color="#C9D4FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="200" rx="28" fill="url(#bg)"/>
+  <circle cx="88" cy="100" r="26" fill="none" stroke="url(#key)" stroke-width="12"/>
+  <rect x="110" y="94" width="60" height="12" rx="6" fill="url(#key)"/>
+  <rect x="146" y="106" width="10" height="18" rx="5" fill="url(#key)"/>
+  <rect x="164" y="106" width="10" height="12" rx="5" fill="url(#key)"/>
+  <circle cx="190" cy="70" r="7" fill="#6EE7B7"/>
+  <circle cx="206" cy="56" r="5" fill="#6EE7B7" opacity="0.75"/>
+  <circle cx="218" cy="44" r="3.5" fill="#6EE7B7" opacity="0.5"/>
+  <text x="240" y="96" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF">ark-key-pool</text>
+  <text x="240" y="128" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" fill="#C9D4FF">Multi-key failover for Agent Plan</text>
+</svg>

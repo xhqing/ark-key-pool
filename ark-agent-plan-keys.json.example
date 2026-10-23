@@ -1,0 +1,14 @@
+{
+  "provider": "volcengine-agent-plan",
+  "keys": [
+    { "name": "主账号", "key": "sk-REPLACE_ME_ACCOUNT_A" },
+    { "name": "备用账号", "key": "sk-REPLACE_ME_ACCOUNT_B" }
+  ],
+  "cooldown": {
+    "authSeconds": 600,
+    "rateLimitSeconds": 60,
+    "quotaSeconds": 1800,
+    "maxSeconds": 86400
+  },
+  "retryAuthErrors": true
+}
