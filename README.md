@@ -101,6 +101,8 @@ bash verify/run-tests.sh
 
 Runs four scenarios against a local mock (normal, quota exhaustion, auth failure, both exhausted) — no real quota is consumed.
 
-## License
+## License & Attribution
 
-MIT
+Copyright (c) 2026 All Contributors. Released under the [MIT License](LICENSE.md).
+
+Attribution: if you use or reference this project, please keep the copyright notice and credit the source: [ark-key-pool](https://github.com/xhqing/ark-key-pool).

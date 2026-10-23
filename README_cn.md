@@ -101,6 +101,8 @@ bash verify/run-tests.sh
 
 对本地 mock 跑四个场景（正常、额度耗尽、Key 失效、两个都耗尽），不消耗任何真实额度。
 
-## 许可证
+## 许可证与署名
 
-MIT
+Copyright (c) 2026 All Contributors。基于 [MIT License](LICENSE.md) 发布。
+
+署名：使用或引用本项目时，请保留版权声明并注明来源：[ark-key-pool](https://github.com/xhqing/ark-key-pool)。
