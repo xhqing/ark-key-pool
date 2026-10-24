@@ -18,6 +18,15 @@ export default function (pi: ExtensionAPI) {
 				contextWindow: 100000,
 				maxTokens: 1000,
 			},
+			{
+				id: "probe-model-2",
+				name: "Probe Model 2",
+				reasoning: false,
+				input: ["text"],
+				cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+				contextWindow: 100000,
+				maxTokens: 1000,
+			},
 		],
 	});
 }
