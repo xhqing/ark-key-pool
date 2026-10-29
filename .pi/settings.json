@@ -1,0 +1,18 @@
+{
+  "extensions": [
+    "~/Developer/ExecutiveAssistantAgent/.pi/extensions",
+    "./extensions"
+  ],
+  "skills": [
+    "~/Developer/ExecutiveAssistantAgent/.pi/skills",
+    "./skills"
+  ],
+  "prompts": [
+    "~/Developer/ExecutiveAssistantAgent/.pi/prompts",
+    "./prompts"
+  ],
+  "themes": [
+    "~/Developer/ExecutiveAssistantAgent/.pi/themes",
+    "./themes"
+  ]
+}
