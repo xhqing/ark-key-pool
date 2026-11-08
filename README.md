@@ -116,6 +116,6 @@ Runs five scenarios against a local mock (normal, quota exhaustion, auth failure
 
 ## License & Attribution
 
-Copyright (c) 2026 All Contributors. Released under the [MIT License](LICENSE.md).
+Copyright (c) 2026 xhqing <https://github.com/xhqing>. Released under the [MIT License](LICENSE.md).
 
 Attribution: if you use or reference this project, please keep the copyright notice and credit the source: [ark-key-pool](https://github.com/xhqing/ark-key-pool).
