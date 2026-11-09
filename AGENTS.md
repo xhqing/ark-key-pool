@@ -1,12 +1,12 @@
 # ark-key-pool
 
-> ExecutiveAssistantAgent（Kit）名下的子项目 · 本项目规则本体
+> assistant-agent（Kit）名下的子项目 · 本项目规则本体
 
 给 pi 的火山方舟 Agent Plan 做多 Key 池的扩展：一个账号的 Key 额度用完或被拒，请求自动落到下一个账号。单文件 `ark-key-pool.ts`，`./install.sh` 装进 `~/.pi/agent/extensions/`。
 
 ## 归谁负责
 
-本项目由 **Kit**（ExecutiveAssistantAgent）负责维护。改动范围跨出本项目时，先向 Kit 说明，不自行扩张改动面。
+本项目由 **Kit**（assistant-agent）负责维护。改动范围跨出本项目时，先向 Kit 说明，不自行扩张改动面。
 
 ## 你的角色
 
