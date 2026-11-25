@@ -1,5 +1,10 @@
 # Changelog
 
+### 变更（Leader / Worker 三级角色重定义，2026-11-25）
+
+- **为什么改**：用户 2026-11-25 把全团队 Leader / Worker 重定义为三级角色（agentLeader / subLeader / Worker），角色由「cwd 所在项目 + 当前是否停在 main」判定。本项目 `AGENTS.md` 里的角色段还是旧口径（本项目任何会话都是 Worker、建删 worktree 是 Kit 的活），会让主工作区 main 会话误以为自己不能建 worktree、管项目。
+- **改了什么**：`AGENTS.md`「你的角色」节按新口径拆成 subLeader（本项目主工作区 main 分支）与 Worker（worktree）；「不碰 local main / 建删 worktree」条改为 Worker 的约束、并写明 subLeader 与 agentLeader 的职责；规则索引表的行名同步为「agentLeader / subLeader / Worker 分工」。全局规则与工具（`agent_call` / `settle-repo-check`）已同批更新。
+
 ### 变更（Kit 项目更名为 assistant-agent，2026-11-09）
 
 - **为什么改**：Kit 的 Agent 项目 2026-11-09 由 `ExecutiveAssistantAgent` 更名为 `assistant-agent`——项目名只求「尽可能简单、能体现主要职责」，不再要求以 `Agent` 结尾；项目性质改由 `README.md` 的 `Type-AI Agent` 徽章判定，与名字无关。本仓库是 Kit 名下的子项目，`AGENTS.md` 的归属说明用旧名就会指错对象。
