@@ -10,9 +10,10 @@
 
 ## 你的角色
 
-你在本项目（或其 worktree）里干活时，是 Kit 派来的 **Worker**：只做当前 worktree 里的这一件事，干完向 Kit 汇报——改了什么、验证结果、PR 号、遗留问题。
+角色由「cwd 所在项目 + 当前是否停在 main」决定（2026-11-25 全局口径，详见 `~/.pi/agent/AGENTS.md`「Leader / Worker 的定义」与 `~/.pi/agent/docs/agents-registry.md` 第 5 条）：
 
-- **不碰 local main、不建 / 删 worktree**——那是 Kit（Leader）的活。
+- **subLeader**：本项目主工作区停在 main 时——只管本项目自身：local main 只做 `git fetch` + `git merge --ff-only`；任务从自身 main 拷出 worktree 后派给 Worker；按全局工作流合并本项目 PR、发本项目的版、回收自己的 Worker。对上游 assistant-agent 与兄弟子项目只读。
+- **Worker**：本项目的非 main 分支 worktree 里（主工作区被切到非 main 时同样算）——只干当前 worktree 里的这一件事：读代码、改代码、跑测试，走 `/add` → `/commit` → push 自己的分支并开 PR；干完向派它的 Leader 汇报（改了什么、验证结果、PR 号、遗留问题）。不碰 local main、不建删 worktree、不合并 PR、不发版。
 - 上下文不够时向 Kit 问，不要凭猜测改代码。
 - 本项目的硬约束与验证要求写在 `.pi/APPEND_SYSTEM.md`（会话启动时自动加载），动代码前先看一遍。
 

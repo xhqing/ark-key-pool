@@ -1,5 +1,11 @@
 # Changelog
 
+### 变更（会话角色口径对齐 2026-11-25 三级定义，2026-11-25）
+
+- **为什么改**：全局 2026-11-25 重定义了会话角色——角色只看「cwd 所在项目 + 当前分支」：Agent 项目主工作区 main = agentLeader、子项目主工作区 main = subLeader、任何项目的非 main worktree = Worker。本仓库 `AGENTS.md`「你的角色」还停在 2026-11-07 口径（本项目根 / worktree 一律算 Worker），把在自己主工作区 main 上做事的会话也说成 Worker，权限边界与实际规则相反。
+- **改了什么**：`AGENTS.md`「你的角色」整节重写为三级口径——subLeader（本项目主工作区 main：只管本仓库自身，local main 只做 ff 同步；建 worktree、派 Worker、合并本项目 PR、发版、回收 Worker；对上游 assistant-agent 与兄弟子项目只读）与 Worker（非 main 分支 worktree：只干当前 worktree，走 `/add` → `/commit` → push 分支 + PR，不碰 local main、不建删 worktree、不合并 PR、不发版），并指向全局 `AGENTS.md`「Leader / Worker 的定义」与 `docs/agents-registry.md` 第 5 条。规则载体仍是本仓库实体 `AGENTS.md` + `.pi/APPEND_SYSTEM.md`，不挂软链接、不写跨仓库 settings 路径。
+- **影响**：纯规则文档改动，不改 `ark-key-pool.ts` 与 `install.sh`，不涉版本号（文档类改动不发版）。
+
 ### 变更（Kit 项目更名为 assistant-agent，2026-11-09）
 
 - **为什么改**：Kit 的 Agent 项目 2026-11-09 由 `ExecutiveAssistantAgent` 更名为 `assistant-agent`——项目名只求「尽可能简单、能体现主要职责」，不再要求以 `Agent` 结尾；项目性质改由 `README.md` 的 `Type-AI Agent` 徽章判定，与名字无关。本仓库是 Kit 名下的子项目，`AGENTS.md` 的归属说明用旧名就会指错对象。
