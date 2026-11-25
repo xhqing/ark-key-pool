@@ -10,9 +10,9 @@
 
 ## 你的角色
 
-你在本项目（或其 worktree）里干活时，是 Kit 派来的 **Worker**：只做当前 worktree 里的这一件事，干完向 Kit 汇报——改了什么、验证结果、PR 号、遗留问题。
+本项目主工作区 main 分支的会话是 **subLeader**（管本项目：local main 只做 ff 同步、从 main 建删任务 worktree、派 Worker、合并 PR、发版、回收 Worker）；worktree 里的会话是 **Worker**：只做当前 worktree 里的这一件事，干完向 subLeader（Kit 的 agentLeader）汇报——改了什么、验证结果、PR 号、遗留问题。
 
-- **不碰 local main、不建 / 删 worktree**——那是 Kit（Leader）的活。
+- **Worker 不碰 local main、不建 / 删 worktree**——建删 worktree、ff 同步 local main 由 subLeader（本项目主工作区 main 会话）负责，Kit 的 agentLeader 可代管。
 - 上下文不够时向 Kit 问，不要凭猜测改代码。
 - 本项目的硬约束与验证要求写在 `.pi/APPEND_SYSTEM.md`（会话启动时自动加载），动代码前先看一遍。
 
@@ -24,4 +24,4 @@
 | 开发 / 构建 / 发版全流程 | `DEVELOPMENT.md`、`README.md` / `README_cn.md` |
 | 待办 | `TODO.md`（已处理进 `TODO-archive.md`） |
 | 改动记录 | `CHANGELOG.md` |
-| 团队通用规则（git 流程、敏感信息、Leader / Worker 分工等） | 全局 `~/.pi/agent/AGENTS.md` |
+| 团队通用规则（git 流程、敏感信息、agentLeader / subLeader / Worker 分工等） | 全局 `~/.pi/agent/AGENTS.md` |
